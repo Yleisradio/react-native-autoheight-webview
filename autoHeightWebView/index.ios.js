@@ -142,7 +142,7 @@ const Styles = StyleSheet.create({
 
 const BaseScript =
     `
-    ; 
+    ;
     (function () {
         var i = 0;
         var height = 0;
@@ -159,7 +159,9 @@ const BaseScript =
                 window.location.hash = ++i;
             }
         }
-        updateHeight();
+        setTimeout(function() {
+            updateHeight();
+        }, 1000);
         window.addEventListener('load', updateHeight);
         window.addEventListener('resize', updateHeight);
     } ());
@@ -167,7 +169,7 @@ const BaseScript =
 
 const IframeBaseScript =
     `
-    ; 
+    ;
     (function () {
         var i = 0;
         var height = 0;
@@ -178,7 +180,9 @@ const IframeBaseScript =
                 window.location.hash = ++i;
             }
         }
-        updateHeight();
+        setTimeout(function() {
+            updateHeight();
+        }, 1000);
         window.addEventListener('load', updateHeight);
         window.addEventListener('resize', updateHeight);
     } ());
